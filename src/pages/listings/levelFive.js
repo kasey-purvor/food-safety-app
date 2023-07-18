@@ -35,7 +35,7 @@ export default function LevelFive() {
             }
         } catch (e) {
             console.log(e);
-        }
+        };
     };
     getBusinessData();
 
