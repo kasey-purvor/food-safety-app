@@ -55,7 +55,7 @@ export default function Navbar({ isLoggedIn }) {
                     className="hidden basis-full grow sm:block"
                 >
                     <div className="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:pl-5">
-                        <Link href="/listings/levelThreeAndBelow">
+                        <Link href="/levels/levelThreeAndBelow/levelThreeAndBelow">
                             <button className="bg-green-700 hover:text-grey-400 text-white font-bold py-2 px-3 mr-1  rounded-3xl">
                                 Level 3 and below
                             </button>
@@ -63,7 +63,7 @@ export default function Navbar({ isLoggedIn }) {
 
                         <Link
                             className="bg-green-700 hover:text-grey-400 text-white font-bold py-2 px-3 mr-1  rounded-3xl"
-                            href="/listings/levelFour"
+                            href="/levels/levelFour/levelFour"
                             aria-current="page"
                         >
                             Level 4
@@ -71,7 +71,7 @@ export default function Navbar({ isLoggedIn }) {
 
                         <Link
                             className="bg-green-700 hover:text-grey-400 text-white font-bold py-2 px-3 mr-1  rounded-3xl"
-                            href="/listings/levelFive"
+                            href="/levels/levelFive/levelFive"
                         >
                             Level 5
                         </Link>
