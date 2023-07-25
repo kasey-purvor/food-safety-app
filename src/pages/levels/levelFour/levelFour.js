@@ -3,7 +3,7 @@ import EstablishmentContainer from "@/components/establishmentContainer";
 import Head from "next/head";
 import Link from "next/link";
 
-export default function LevelFive({ pagesNeeded, totalRecords }) {
+export default function LevelFour({ pagesNeeded, totalRecords }) {
     return (
         <div>
             <Head>
