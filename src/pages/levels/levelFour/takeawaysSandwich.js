@@ -15,10 +15,10 @@ export async function getStaticProps() {
     };
 }
 
-export default function LevelFive({ pagesNeeded, totalRecords }) {
+export default function LevelFour({ pagesNeeded, totalRecords }) {
     const [retailerData, setRetailerData] = useState([]);
     // const [HTML, setHTML] = useState(undefined);
-    // const [percentageLoaded, setPercentageLoaded] = useState(0);
+    const [percentageLoaded, setPercentageLoaded] = useState(0);
     const [totalRecordCount, setTotalRecordCount] = useState(totalRecords);
     const currentPage = useRef(1); // useRef creates a variable that is mutable but is kept when the page rerenders, it is therefore good for managing loops and state
 
@@ -59,19 +59,19 @@ export default function LevelFive({ pagesNeeded, totalRecords }) {
             <div className="flex justify-between mb-1">
                 <span className="text-base font-medium text-blue-700">Pages Loaded - 5000 Establishments per</span>
                 <span className="text-sm font-medium text-blue-700">
-                    Pages:  {`${currentPage.current -1 } / ${pagesNeeded}`} 
+                    Pages: {`${currentPage.current - 1} / ${pagesNeeded}`}
                 </span>
             </div>
             <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
                 <div
                     className="bg-blue-600 h-2.5 rounded-full"
-                    style={{ width: `${((currentPage.current - 1  )/ pagesNeeded) * 100}%` }}
+                    style={{ width: `${((currentPage.current - 1) / pagesNeeded) * 100}%` }}
                 ></div>
             </div>
             <div className="flex justify-between mb-1">
                 <span className="text-base font-medium text-blue-700">Records Loaded</span>
                 <span className="text-sm font-medium text-blue-700">
-                    Records: {`${retailerData.length} / ${totalRecordCount}`} 
+                    Records: {`${retailerData.length} / ${totalRecordCount}`}
                 </span>
             </div>
         </>
@@ -92,15 +92,16 @@ export default function LevelFive({ pagesNeeded, totalRecords }) {
     return (
         <div>
             <Head>
-                <title>Lvl 5 Bars, Clubs & Pubs </title>
+                <title>Lvl 4 Takeaways & Sandwich Shops </title>
             </Head>
             <PageContainer>
                 <div>
-                <p className="text-3xl font-bold  text-blue-700"> Level 5: Bars, Clubs & Pubs</p>
-                    <p className="text-2xl font-bold  text-blue-700">
-                        {currentPage.current > pagesNeeded  || "Please wait until loading has finished. The results do not arrive in date order and are sorted by your browser upon completion." }
+                    <p className="text-3xl font-bold  text-blue-700"> Level 4: Takeaways & Sandwich Shops</p>
+                    <p className="text-2xl font-bold  text-blue-600">
+                        {currentPage.current > pagesNeeded ||
+                            "Please wait until loading has finished. The results do not arrive in date order and are sorted by your browser upon completion."}
                     </p>
-                    <br></br>
+                    <br />
                     {loadingBar}
                 </div>
                 {returnHTML}
@@ -131,8 +132,8 @@ function generateRelevantData(dataArray) {
     });
     return relevantDataArray;
 }
-function handleUrl(page, establishmentType) {  
-    const url = `https://api1-ratings.food.gov.uk//enhanced-search/en-GB/%5e/%5e/alpha/7843/%5e/equal5/1/${page}/5000/json`;
+function handleUrl(page, establishmentType) {
+    const url = `https://api1-ratings.food.gov.uk//enhanced-search/en-GB/%5e/%5e/alpha/7844/%5e/Equal4/1/${page}/5000/json`;
     console.log(url);
     return url;
 }
@@ -148,4 +149,3 @@ const findCount = async () => {
         console.log(e);
     }
 };
-

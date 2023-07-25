@@ -7,26 +7,28 @@ export default function LevelThreeAndBelow({ pagesNeeded, totalRecords }) {
     return (
         <div>
             <Head>
-                <title>Level Five | Food Safety App </title>
+                <title>Level Three & Below | Food Safety App </title>
             </Head>
             <PageContainer>
                 <div>
+                <p className="text-3xl font-bold  text-blue-700"> Level 3 & Below Establishments</p>
+                <br/>
                     <div className="flex justify-between mb-1">
                         <Link
                             className="bg-green-700 hover:text-grey-400 text-white font-bold py-2 px-3 mr-1  rounded-3xl"
-                            href="/levels/levelFive/cafesResCanteens"
+                            href="/levels/levelThreeAndBelow/cafesResCanteens"
                         >
                             Cafe`s Restaurants & Canteens
                         </Link>
                         <Link
                             className="bg-green-700 hover:text-grey-400 text-white font-bold py-2 px-3 mr-1  rounded-3xl"
-                            href="/levels/levelFive/barsClubsPubs"
+                            href="/levels/levelThreeAndBelow/barsClubsPubs"
                         >
                             Bars, Clubs & Pubs 
                         </Link>
                         <Link
                             className="bg-green-700 hover:text-grey-400 text-white font-bold py-2 px-3 mr-1  rounded-3xl"
-                            href="/levels/levelFive/takeawaysSandwich"
+                            href="/levels/levelThreeAndBelow/takeawaysSandwich"
                         >
                             Takeaways & Sandwich shops
                         </Link>

@@ -11,6 +11,8 @@ export default function LevelFive({ pagesNeeded, totalRecords }) {
             </Head>
             <PageContainer>
                 <div>
+                <p className="text-3xl font-bold  text-blue-700"> Level 5 Establishments</p>
+                <br/>
                     <div className="flex justify-between mb-1">
                         <Link
                             className="bg-green-700 hover:text-grey-400 text-white font-bold py-2 px-3 mr-1  rounded-3xl"
