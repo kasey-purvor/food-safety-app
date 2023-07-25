@@ -1,6 +1,6 @@
 export default function EstablishmentContainer({ establishmentObject }) {
     return (
-        <div className="p-4 m-4 max-h-auto  mx-auto sm:max-w-3xl sm:w-3/4 md:w-1/2 bg-orange-300  rounded-3xl">
+        <div className="p-4 m-1 max-h-auto  mx-auto sm:max-w-3xl sm:w-3/4 md:w-1/2 bg-orange-300  rounded-3xl">
             <p>Business Name: {establishmentObject.BusinessName}</p>
             <p>Address Line 1: {establishmentObject.AddressLine1}</p>
             <p>Address Line 2: {establishmentObject.AddressLine2}</p>
