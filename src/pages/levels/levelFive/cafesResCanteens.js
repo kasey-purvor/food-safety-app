@@ -28,7 +28,6 @@ export default function LevelFive({ pagesNeeded, totalRecords }) {
             console.log(currentPage);
             if (currentPage.current <= pagesNeeded) {
                 console.log("For Loop Says: currentPage.current pre = ", currentPage.current);
-                console.log("Retailer Data count", retailerData.length);
                 let initResponse = await fetch(handleUrl(currentPage.current));
                 let parsedRes = await initResponse.json();
                 let establishmentDetails = parsedRes.FHRSEstablishment.EstablishmentCollection.EstablishmentDetail;
@@ -89,7 +88,7 @@ export default function LevelFive({ pagesNeeded, totalRecords }) {
         if (currentPage.current <= pagesNeeded) {
             getBusinessData();
         }
-    }, [retailerData]);
+    }, [retailerData, getBusinessData, pagesNeeded]);
     return (
         <div>
             <Head>
