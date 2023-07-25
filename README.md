@@ -1,38 +1,24 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Food Safety Sales App
 
-## Getting Started
+### This app was builtas a sales tool for a company, by request, that sells food hygiene systems to help establishments improve & maintain their score. The application allows them to target establishments with different Food Hygeine Rating, depending on their target ratings.  
 
-First, run the development server:
+#### Their are 3 main catergories: 
+1. Level 5 
+1. level 4 
+1. Level 3 and below
+#### And within each there are 3 types of establishment they wish to target: 
+* Cafe`s, Resteraunts & Canteens
+* Bars, Clubs & Pubs
+* Takeaways & Sandwich shops 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+### The app allows them to chose which catergory & subcatergory and get all available data from the FHRS external API. A loading bar is provided due to the large data sets. The data is then sorted into decsending date order to allow them to target the latest reviews. A checkbox is provided to allow them to know which have been contacted. 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech
+* Next.js / React
+* Tailwind.css
+* FHRS API 
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Under The Hood
+#### The FHRS api allows only 5000 records sent on each request, so some extra functions were needed. When a establishment type is chosen, getStaticProps performs an initial request and get the total number of records and pages and passes them as props to the components. The page then performs the necessary number of requests, upping the page count with each. This is also how the loading bar works.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
