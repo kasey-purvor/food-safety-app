@@ -29,6 +29,8 @@ const proxyResHAndler = (proxyRes, req, res) => {
         // console.log("Data has been turned into JSON ", dataJSON);
         dataJSON ? console.log("proxy server:  data was returned from backend API") : null;
 
+        res.setHeader("access-control-allow-origin", "*");
+
         res.send(dataJSON);
     });
 };
