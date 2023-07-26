@@ -2,6 +2,7 @@
 import proxy from '../../proxy.js'
 
 export default async function handler(req, res) {
+    // console.log("Dynamic Route HEaders", req.headers)
     await proxy(req, res, (err) => {
         if (err) {
             console.log("error called in the proxy call itself");
