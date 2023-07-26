@@ -4,7 +4,12 @@ import { data } from "autoprefixer";
 import { useState, useEffect, useCallback, useRef } from "react";
 import Head from "next/head";
 
-export async function getStaticProps() {
+if (process.env.NEXT_PUBLIC_DEV === "true") {
+    var frontendUrl = process.env.NEXT_PUBLIC_FRONTEND_URL;
+} else {
+    var frontendUrl = `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`;
+}
+export async function getServerSideProps() {
     const { pagesNeeded, totalRecords } = await findCount();
     console.log(`Get Static Props: Pages needed: ${pagesNeeded}`);
     return {
@@ -132,7 +137,7 @@ function generateRelevantData(dataArray) {
     return relevantDataArray;
 }
 function handleUrl(page, establishmentType) {  
-    const url = `https://api1-ratings.food.gov.uk//enhanced-search/en-GB/%5e/%5e/alpha/7843/%5e/equal5/1/${page}/5000/json`;
+    const url = `${frontendUrl}/api/enhanced-search/en-GB/%5e/%5e/alpha/7843/%5e/equal5/1/${page}/5000/json`;
     console.log(url);
     return url;
 }
