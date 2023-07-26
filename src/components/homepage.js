@@ -5,6 +5,8 @@ const text = `# **Food Safety Sales App**
 
 ### This app was built as a sales tool for a company that sells food hygiene systems to help establishments improve & maintain their score. The application allows them to target establishments with different Food Hygiene Ratings, depending on their target.  
 
+### ***Please use "Level 3 & Below' if you are simply here to trial the app. Other catergories have many more results and long load times***
+
 ### **There are 3 main categories:** 
 1. Level 5 
 1. level 4 
@@ -23,7 +25,7 @@ const text = `# **Food Safety Sales App**
 * FHRS API 
 ## **Under The Hood**
 ### The FHRS api allows only 5000 records to be sent on each request and, strictly, does not allow cors requests - so some extra code was needed. All requests are forwarded to a **proxy server** hosted on a **dynamic api route**. The proxy removes all headers and adds the necessary headers to **imitate an original request**. I suspect the FHRS api blocks requests with headers indicating a forwarded request.
-### When a user chooses an establishment type, **getServerSideProps** performs an initial request and get the total number of records and pages and passes them as props to the components. The page then performs the necessary number of requests, upping the page count with each. This is also how the loading bar works.
+### When a user chooses an establishment type, **getServerSideProps** performs an initial request and get the total number of records and pages and passes them as props to the components. The page then performs the necessary number of requests, upping the page count with each. This is also how the loading bar works. Also, **useCallback, useRef** & **dependacies** are used to handle the re-rendering through the iteration. useRef is used to keep track of the current page & useCallback is used to stop the function being redeclared every time the page is re-rendered.
 ### At the clients request **pagination was not applied**. They wanted all results to appear on one page. 
 `
 
@@ -35,7 +37,7 @@ export default function Homepage() {
             <main className={styles.homepage}>
                 <MarkdownRenderer
                     markdown={text}
-                    className="bg-orange-300 rounded-3xl p-5 max-w-3xl"
+                    className="bg-orange-300 rounded-3xl p-5 max-w-3xl center"
                 />
             </main>
         </PageContainer>
