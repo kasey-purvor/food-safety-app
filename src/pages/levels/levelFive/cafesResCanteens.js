@@ -60,8 +60,8 @@ export default function LevelFive({ pagesNeeded, totalRecords }) {
         }
     }, [pagesNeeded]); // this dependancy makes the function only get called when the pagesNeeded changes, which it wont so the function should not re-run each rerender. However as state is changed within it still does.
     let loadingBar = (
-        <div className="min-w-full">
-            <div className="flex  mb-1">
+        <div >
+            <div className="flex justify-between mb-1">
                 <span className="text-base font-medium text-blue-700">Pages Loaded - 5000 Establishments per</span>
                 <span className="text-sm font-medium text-blue-700">
                     Pages: {`${currentPage.current - 1} / ${pagesNeeded}`}
@@ -100,7 +100,7 @@ export default function LevelFive({ pagesNeeded, totalRecords }) {
                 <title>Lvl 5 Cafes, Rests & Canteens </title>
             </Head>
             <PageContainer>
-                <div className="w-full">
+                <div className="w-4/5">
                 <p className="text-3xl font-bold  text-blue-700"> Level 5: Cafes, Rests & Canteens</p>
                     <p className="text-2xl font-bold  text-blue-700">
                     {currentPage.current > pagesNeeded  || "Please wait until loading has finished. The results do not arrive in date order and are sorted by your browser upon completion." }

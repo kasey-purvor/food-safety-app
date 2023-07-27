@@ -100,7 +100,7 @@ export default function LevelThreeAndBelow({ pagesNeeded, totalRecords }) {
                 <title>Lvl 3 & below: Cafes, Rests & Canteens </title>
             </Head>
             <PageContainer>
-                <div className="w-full">
+                <div className="w-4/5">
                     <p className="text-3xl font-bold  text-blue-700"> Level 3 and Below: Cafes, Rests & Canteens</p>
                     <p className="text-2xl font-bold  text-blue-700">
                         {currentPage.current > pagesNeeded ||
