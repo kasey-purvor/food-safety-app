@@ -60,8 +60,8 @@ export default function LevelThreeAndBelow({ pagesNeeded, totalRecords }) {
         }
     }, [pagesNeeded]); // this dependancy makes the function only get called when the pagesNeeded changes, which it wont so the function should not re-run each rerender. However as state is changed within it still does.
     let loadingBar = (
-        <>
-            <div className="flex justify-between mb-1">
+        <div className="w-full">
+            <div className="flex justify-between mb-1 w-full">
                 <span className="text-base font-medium text-blue-700">Pages Loaded - 5000 Establishments per</span>
                 <span className="text-sm font-medium text-blue-700">
                     Pages: {`${currentPage.current - 1} / ${pagesNeeded}`}
@@ -79,7 +79,7 @@ export default function LevelThreeAndBelow({ pagesNeeded, totalRecords }) {
                     Records: {`${retailerData.length} / ${totalRecordCount}`}
                 </span>
             </div>
-        </>
+        </div>
     );
     let returnHTML = retailerData.map((retailer) => {
         return (
@@ -100,7 +100,7 @@ export default function LevelThreeAndBelow({ pagesNeeded, totalRecords }) {
                 <title>Lvl 3 & below: Bars, Clubs & Pubs </title>
             </Head>
             <PageContainer>
-                <div>
+                <div className="w-full">
                     <p className="text-3xl font-bold  text-blue-700"> Level 3 and Below: Bars, Clubs & Pubs</p>
                     <p className="text-2xl font-bold  text-blue-700">
                         {currentPage.current > pagesNeeded ||

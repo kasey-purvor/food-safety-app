@@ -67,7 +67,7 @@ export default function LevelThreeAndBelow({ pagesNeeded, totalRecords }) {
                     Pages: {`${currentPage.current - 1} / ${pagesNeeded}`}
                 </span>
             </div>
-            <div className="w-auto bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+            <div className=" bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
                 <div
                     className="bg-blue-600 h-2.5 rounded-full"
                     style={{ width: `${((currentPage.current - 1) / pagesNeeded) * 100}%` }}
@@ -100,7 +100,7 @@ export default function LevelThreeAndBelow({ pagesNeeded, totalRecords }) {
                 <title>Lvl 3 & below: Cafes, Rests & Canteens </title>
             </Head>
             <PageContainer>
-                <div>
+                <div className="w-full">
                     <p className="text-3xl font-bold  text-blue-700"> Level 3 and Below: Cafes, Rests & Canteens</p>
                     <p className="text-2xl font-bold  text-blue-700">
                         {currentPage.current > pagesNeeded ||

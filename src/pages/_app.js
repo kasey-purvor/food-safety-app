@@ -4,7 +4,7 @@ import PageContainer from '@/components/pageContainer'
 
 export default function App({ Component, pageProps }) {
   return (
-    <div>
+    <div className="bg-gray-300">
     <Navbar/>
     <PageContainer>
         <Component {...pageProps} />

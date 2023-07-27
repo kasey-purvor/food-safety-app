@@ -37,7 +37,7 @@ export default function Homepage() {
             <main className={styles.homepage}>
                 <MarkdownRenderer
                     markdown={text}
-                    className="bg-orange-300 rounded-3xl p-5 max-w-3xl center"
+                    className="bg-blue-300 rounded-3xl p-5 max-w-3xl center"
                 />
             </main>
         </PageContainer>

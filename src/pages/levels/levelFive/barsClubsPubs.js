@@ -100,7 +100,7 @@ export default function LevelFive({ pagesNeeded, totalRecords }) {
                 <title>Lvl 5 Bars, Clubs & Pubs </title>
             </Head>
             <PageContainer>
-                <div>
+                <div className="w-full">
                 <p className="text-3xl font-bold  text-blue-700"> Level 5: Bars, Clubs & Pubs</p>
                     <p className="text-2xl font-bold  text-blue-700">
                         {currentPage.current > pagesNeeded  || "Please wait until loading has finished. The results do not arrive in date order and are sorted by your browser upon completion." }

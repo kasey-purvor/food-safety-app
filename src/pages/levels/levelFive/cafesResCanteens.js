@@ -60,14 +60,14 @@ export default function LevelFive({ pagesNeeded, totalRecords }) {
         }
     }, [pagesNeeded]); // this dependancy makes the function only get called when the pagesNeeded changes, which it wont so the function should not re-run each rerender. However as state is changed within it still does.
     let loadingBar = (
-        <>
-            <div className="flex justify-between mb-1">
+        <div className="min-w-full">
+            <div className="flex  mb-1">
                 <span className="text-base font-medium text-blue-700">Pages Loaded - 5000 Establishments per</span>
                 <span className="text-sm font-medium text-blue-700">
                     Pages: {`${currentPage.current - 1} / ${pagesNeeded}`}
                 </span>
             </div>
-            <div className="w-auto bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+            <div className="min-w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
                 <div
                     className="bg-blue-600 h-2.5 rounded-full"
                     style={{ width: `${((currentPage.current - 1) / pagesNeeded) * 100}%` }}
@@ -79,7 +79,7 @@ export default function LevelFive({ pagesNeeded, totalRecords }) {
                     Records: {`${retailerData.length} / ${totalRecordCount}`}
                 </span>
             </div>
-        </>
+        </div>
     );
     let returnHTML = retailerData.map((retailer) => {
         return (
@@ -100,7 +100,7 @@ export default function LevelFive({ pagesNeeded, totalRecords }) {
                 <title>Lvl 5 Cafes, Rests & Canteens </title>
             </Head>
             <PageContainer>
-                <div>
+                <div className="w-full">
                 <p className="text-3xl font-bold  text-blue-700"> Level 5: Cafes, Rests & Canteens</p>
                     <p className="text-2xl font-bold  text-blue-700">
                     {currentPage.current > pagesNeeded  || "Please wait until loading has finished. The results do not arrive in date order and are sorted by your browser upon completion." }

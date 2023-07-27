@@ -15,19 +15,19 @@ export default function LevelFive({ pagesNeeded, totalRecords }) {
                 <br/>
                     <div className="flex justify-between mb-1">
                         <Link
-                            className="bg-green-700 hover:text-grey-400 text-white font-bold py-2 px-3 mr-1  rounded-3xl"
+                            className="bg-blue-400 hover:bg-blue-700 hover:text-grey-400 text-white font-bold py-2 px-3 mr-1  rounded-3xl"
                             href="/levels/levelFive/cafesResCanteens"
                         >
                             Cafe`s Restaurants & Canteens
                         </Link>
                         <Link
-                            className="bg-green-700 hover:text-grey-400 text-white font-bold py-2 px-3 mr-1  rounded-3xl"
+                            className="bg-blue-400 hover:bg-blue-700 hover:text-grey-400 text-white font-bold py-2 px-3 mr-1  rounded-3xl"
                             href="/levels/levelFive/barsClubsPubs"
                         >
                             Bars, Clubs & Pubs 
                         </Link>
                         <Link
-                            className="bg-green-700 hover:text-grey-400 text-white font-bold py-2 px-3 mr-1  rounded-3xl"
+                            className="bg-blue-400 hover:bg-blue-700 hover:text-grey-400 text-white font-bold py-2 px-3 mr-1  rounded-3xl"
                             href="/levels/levelFive/takeawaysSandwich"
                         >
                             Takeaways & Sandwich shops

@@ -6,14 +6,14 @@ export default function Navbar({ isLoggedIn }) {
     const [userLogedIn, setUserLoggedIn] = useState(false);
 
     return (
-        <header className="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full text-sm py-4 bg-gray-700">
+        <header className="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-screen text-sm py-4 bg-black">
             <nav
                 className="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between"
                 aria-label="Global"
             >
                 <div className="flex items-center justify-between">
                     <Link
-                        className="flex-none text-xl font-semibold text-white"
+                        className="flex-none text-xl font-semibold hover:bg-grey-500 hover:text-gray-700 p-2 rounded-md text-white"
                         href="/"
                     >
                         Food Safety App
@@ -56,13 +56,13 @@ export default function Navbar({ isLoggedIn }) {
                 >
                     <div className="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:pl-5">
                         <Link href="/levels/levelThreeAndBelow/levelThreeAndBelow">
-                            <button className="bg-green-700 hover:text-grey-400 text-white font-bold py-2 px-3 mr-1  rounded-3xl">
+                            <button className="bg-blue-400 hover:bg-blue-700  hover:text-grey-400 text-white font-bold py-2 px-3 mr-1  rounded-3xl">
                                 Level 3 and below
                             </button>
                         </Link>
 
                         <Link
-                            className="bg-green-700 hover:text-grey-400 text-white font-bold py-2 px-3 mr-1  rounded-3xl"
+                            className="bg-blue-400 hover:bg-blue-700 hover:text-grey-400 text-white font-bold py-2 px-3 mr-1  rounded-3xl"
                             href="/levels/levelFour/levelFour"
                             aria-current="page"
                         >
@@ -70,7 +70,7 @@ export default function Navbar({ isLoggedIn }) {
                         </Link>
 
                         <Link
-                            className="bg-green-700 hover:text-grey-400 text-white font-bold py-2 px-3 mr-1  rounded-3xl"
+                            className="bg-blue-400 hover:bg-blue-700 hover:text-grey-400 text-white font-bold py-2 px-3 mr-1  rounded-3xl"
                             href="/levels/levelFive/levelFive"
                         >
                             Level 5
